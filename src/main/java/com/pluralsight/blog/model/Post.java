@@ -5,13 +5,18 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
+@Entity
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String lead;
+    @Column(length = 100000)
     private String body;
     private String author;
+    @Temporal(TemporalType.DATE)
+    @Lob
     private Date date;
 
     public Post() {
