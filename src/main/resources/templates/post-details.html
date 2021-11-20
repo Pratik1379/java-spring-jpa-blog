@@ -24,7 +24,7 @@
             <div class="row py-3">
                 <div class="col-sm-12 post-heading">
                     <h1 class="post-title" th:text="${post.getTitle()}"></h1>
-                    <h3 class="post-subtitle">Category placeholder</h3>
+                    <h3 class="post-subtitle" th:text="${post.getCategory().getName()}"></h3>
                     <h3 class="post-subtitle" th:text="${post.getDateStr()}"></h3>
                     <h3 class="post-subtitle" th:text="${post.getAuthor()}"></h3>
                 </div>
