@@ -16,7 +16,9 @@
 
         <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">Categories Placeholder</li>
+                <li class="nav-item" th:each="category: ${categories}">
+                    <a th:href="@{'/category/' + ${category.getId()}}"><span th:text="${#strings.toUpperCase(category.getName())}"></span></a>
+                </li>
             </ul>
         </div>
     </nav>
